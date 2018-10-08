@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Try Changing the bean Sequence for the interfaces -->
+
+
+
+	<bean id="tradeService" class="ct.common.spring.example1.TradeService">
+		<property name="hService" ref="hService" />
+	</bean>
+
+	<bean id="hService" class="ct.common.spring.example1.HolidayService">
+		<property name="dtService" ref="inDTService" />
+	</bean>
+
+	<bean id="usDTService" class="ct.common.spring.example1.USDateService" />
+	
+	
+	<bean id="inDTService" class="ct.common.spring.example1.INDateService" />
+
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  Define The name spaces standard biler plate Code -->	   					   
+	   					   
+<!--  Define a Bean Trade Service -->	   					   
+	   					   
+	<!-- 
+		 Share the Same Reference of the Queue
+	 -->
+	<bean id="queue" class="java.util.concurrent.LinkedBlockingQueue"/>
+	
+	<bean id="requestProducer" class="ct.common.adv.concurrent.prodncon.RequestProducer">
+		<property name="queue" ref="queue" />
+	</bean>
+	
+	<bean id="requestManager" class="ct.common.adv.concurrent.prodncon.RequestManager">
+		<property name="queue" ref="queue" />
+	</bean>
+
+</beans>
