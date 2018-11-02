@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Required;
 
 /**
- * This class is requires Dateservice based on the region it calculates the
+ * This class requires Dateservice based on the region it calculates the
  * Holidays.
  * 
  * @author nikhil

@@ -42,6 +42,12 @@ public class Order
 	 * The client Order ID
 	 */
 	private String clOrdId;
+	/**
+	 * 'N' --> new
+	 * 'M' --> modify
+	 * 'X' --> Cancel
+	 */
+	private String orderState;
 
 	public Order(int orderId, int instId, Side side, long quantity, double px, String clOrderId)
 	{
@@ -52,6 +58,21 @@ public class Order
 		this.quantity = quantity;
 		this.price = px;
 		this.clOrdId = clOrderId;
+		this.orderState = "N";
+
+	}
+
+	
+	public Order(int orderId, int instId, Side side, long quantity, double px, String clOrderId, String orderState)
+	{
+		Objects.requireNonNull(side);
+		this.orderId = orderId;
+		this.instrumentId = instId;
+		this.side = side;
+		this.quantity = quantity;
+		this.price = px;
+		this.clOrdId = clOrderId;
+		this.orderState = orderState;
 
 	}
 
@@ -65,7 +86,12 @@ public class Order
 		/**
 		 * Sell Side from Client Perspective
 		 */
-		SELL
+		SELL;
+		
+		public static Side identifySide(String side)
+		{
+			return ("BUY".equalsIgnoreCase(side)? Side.BUY : Side.SELL);
+		}
 
 	}
 
@@ -167,5 +193,15 @@ public class Order
 
 		return builder.append(" OrdId=").append(getOrderId()).append(" InstrumentId=").append(getInstrumentId()).append(" Side=").append(getSide())
 				.append(" Price=").append(getPrice()).toString();
+	}
+
+	public String getOrderState()
+	{
+		return orderState;
+	}
+
+	public void setOrderState(String orderState)
+	{
+		this.orderState = orderState;
 	}
 }

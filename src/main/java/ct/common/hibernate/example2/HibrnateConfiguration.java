@@ -1,7 +1,5 @@
 package ct.common.hibernate.example2;
 
-import java.sql.Statement;
-
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,7 +8,6 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import ct.common.hibernate.example1.HibernateUtil;
 import ct.common.spring.example3.DBViewer;
 
 /**
@@ -23,13 +20,10 @@ import ct.common.spring.example3.DBViewer;
 public class HibrnateConfiguration
 {
 
-	private static final String USER = "sa";
-	private static final String ORG_HSQLDB_JDBC_DRIVER = "org.hsqldb.jdbcDriver";
 	private static final String HIBERNATE_CONFIG = "hibernate.example2.cfg.xml";
 	private Session session;
-	private Statement st;
 
-	private static final Logger log = Logger.getLogger(HibernateUtil.class);
+	private static final Logger log = Logger.getLogger(HibrnateConfiguration.class);
 
 	/**
 	 * Do in constructor if the Object is created then we know everything went well.

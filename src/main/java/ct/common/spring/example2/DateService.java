@@ -11,14 +11,12 @@ public interface DateService
 {
 	
 	/**
-	 * 
 	 * @return the Latest or Current tradeDate
 	 */
 	LocalDate getTradeDate();
 	
 	/**
-	 * 
-	 * @return
+	 * @return List of Holidays in the System
 	 */
 	List<LocalDate> getHolidayCalendar();
 }
