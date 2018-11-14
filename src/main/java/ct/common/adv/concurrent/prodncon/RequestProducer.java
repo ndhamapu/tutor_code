@@ -8,8 +8,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.log4j.Logger;
 
 /**
- * @author Nikhil This class creates Dummy Requests and Sends them the sending
- *         is adding into the Queue which can be visualized like any method.
+ * @author Nikhil This class creates Dummy Requests and Sends them. the sending
+ *         is adding message into the Queue which can be visualized like any method.
  * @param <T>
  */
 public class RequestProducer implements Runnable
@@ -47,7 +47,7 @@ public class RequestProducer implements Runnable
 	 */
 	public void randomRequestGenerator() throws InterruptedException
 	{
-		Objects.requireNonNull(queue , "Queue Reference Missing");
+		Objects.requireNonNull(queue, "Queue Reference Missing");
 		Random random = new Random();
 		random.setSeed(40);
 		// HOW MANY OBJECTS TO PRODUCE

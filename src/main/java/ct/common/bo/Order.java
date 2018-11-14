@@ -8,7 +8,7 @@ import java.util.Objects;
  * @author nikhil
  *
  */
-public class Order
+public class Order implements Ord
 {
 	/**
 	 * Buy Or Sell
@@ -48,7 +48,9 @@ public class Order
 	 * 'X' --> Cancel
 	 */
 	private String orderState;
-
+	
+	public final String ORDER_TYPE = "SPOT";
+	
 	public Order(int orderId, int instId, Side side, long quantity, double px, String clOrderId)
 	{
 		Objects.requireNonNull(side);
@@ -203,5 +205,10 @@ public class Order
 	public void setOrderState(String orderState)
 	{
 		this.orderState = orderState;
+	}
+	
+	public String getOrderType()
+	{
+			return ORDER_TYPE;
 	}
 }

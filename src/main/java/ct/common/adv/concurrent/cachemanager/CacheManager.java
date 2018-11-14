@@ -1,7 +1,7 @@
 package ct.common.adv.concurrent.cachemanager;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class CacheManager
 	/**
 	 * Internal data structure that is not exposed to the External World
 	 */
-	private static Map<String, Order> cache = new HashMap<>();
+	private static Map<String, Order> cache = new Hashtable<>();
 
 	public static Order getOrder(String ordID)
 	{

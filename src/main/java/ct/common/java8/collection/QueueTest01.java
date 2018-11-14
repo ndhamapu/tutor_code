@@ -12,7 +12,9 @@ import ct.common.bo.OrderFactory;
 
 /**
  * This class gives a familiarity with Different implementations of Queue The
- * example demonstrates
+ * example demonstrates LinkedList implementation.
+ * 
+ * We can create a Consumer that consumes each element from the Linked List
  * 
  * @author nikhil
  *
@@ -30,7 +32,7 @@ public class QueueTest01
 
 	private static final Logger log = Logger.getLogger(QueueTest01.class);
 
-	// forEach takes a Consumer of te Pattern
+	// forEach takes a Consumer of the Pattern
 	// Consumer<Order> ordConsumer = () -> { };
 
 	public void addElementsInQueue()
@@ -84,7 +86,7 @@ public class QueueTest01
 			throw new RuntimeException("Price too Less not placing the Order");
 		}
 
-		log.info("[Processed the Oder" + ord + " ]");
+		log.info("[Processed the Order" + ord + " ]");
 	}
 
 	public static void main(String[] args)

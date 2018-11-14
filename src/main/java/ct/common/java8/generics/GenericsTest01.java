@@ -21,13 +21,9 @@ import ct.common.bo.OrderFactory;
  * 
  *         earlier they prevented this with poisonMessage
  * 
- *         <code> 
- *         Object obj = poisonMessage; 
- *         if (obj instanceof Order) 
- *         {
- *         randomOrders.add(poisonMessage); 
- *         }
- *         why if(poisonMessage instanceof Order) won't work - something to study.
+ *         <code> Object obj = poisonMessage; if (obj instanceof Order) {
+ *         randomOrders.add(poisonMessage); } why if(poisonMessage instanceof
+ *         Order) won't work - something to study.
  */
 public class GenericsTest01
 {
@@ -103,7 +99,7 @@ public class GenericsTest01
 		List<Order> listWithGenerics = OrderFactory.getRandomOrders(3);
 
 		/**
-		 * Generic Wont let it Compile ! - try  and uncomment
+		 * Generic Wont let it Compile ! - try and uncomment
 		 */
 		// listWithGenerics.add(poisonMessage);
 
