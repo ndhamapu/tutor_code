@@ -10,9 +10,7 @@ import ct.common.bo.OrderFactory;
 
 /**
  * The Thread that adds Orders in the Cache via CacheManager
- * 
  * @author nikhil
- *
  */
 public class CacheFeeder implements Runnable
 {

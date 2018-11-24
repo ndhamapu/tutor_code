@@ -42,8 +42,7 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 		<!-- Java Util Logging -->
-		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-jdk14</artifactId> 
-			<version>1.8.0-beta2</version> </dependency> -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-jdk14</artifactId> <version>1.8.0-beta2</version> </dependency> -->
 		<!-- Java Util Logging ENDS -->
 		<!-- Java LOG4J Logging Logging START -->
 		<dependency>
@@ -70,11 +69,12 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
-
-
-
-
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
