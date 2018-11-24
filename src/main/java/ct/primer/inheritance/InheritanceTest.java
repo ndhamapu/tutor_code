@@ -1,4 +1,4 @@
-package ct.common.inheritance;
+package ct.primer.inheritance;
 
 public class InheritanceTest
 {
@@ -14,7 +14,7 @@ public class InheritanceTest
 		Samsung samsung = new Samsung();
 		samsung.startup();
 		samsung.browseInternet();
-		System.out.println("-err-----------------------------------------");
+		System.out.println("------------------------------------------");
 
 		Xiaomi xiaomi = new Xiaomi();
 		xiaomi.startup();

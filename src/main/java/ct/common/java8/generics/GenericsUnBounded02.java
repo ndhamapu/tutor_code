@@ -10,7 +10,7 @@ import ct.common.bo.Order;
  * Bounded v.s. Unbounded
  * List lst  v.s. List<?> lst
  * <p> The bounded one prevents adding anything Other than null.</p>
- * <p> Used in most cases if the methods to be invoked on the elements in the list are from Object class. 
+ * <p> Used in most cases if the methods to be invoked on the elements in the list which are from Object class. 
  * @author nikhil
  *
  */

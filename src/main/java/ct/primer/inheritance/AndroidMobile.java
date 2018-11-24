@@ -1,4 +1,4 @@
-package ct.common.inheritance;
+package ct.primer.inheritance;
 /**
  * This Class represents a Parent Class that represents Android Mobile
  * 

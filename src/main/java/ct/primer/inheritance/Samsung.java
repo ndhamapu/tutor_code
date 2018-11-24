@@ -1,4 +1,4 @@
-package ct.common.inheritance;
+package ct.primer.inheritance;
 
 public class Samsung extends AndroidMobile
 {
