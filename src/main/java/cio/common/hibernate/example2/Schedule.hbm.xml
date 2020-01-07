@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="ct.common.hibernate.example2.Schedule" table="PUBLIC.SCHEDULE">
+		<id name="scheduleId" column="SCHEDULEID" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="time" type="java.time.LocalTime" update="true" insert="true" access="property" column="TIME" />
+		<property name="zone" type="java.lang.String" update="true" insert="true" access="property" column="ZONE" />
+		<property name="runOnMon" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONMON" />
+		<property name="runOnTue" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONTUE" />
+		<property name="runOnWed" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONWED" />
+		<property name="runOnThu" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONTHU" />
+		<property name="runOnFri" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONFRI" />
+		<property name="runOnSat" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONSAT" />
+		<property name="runOnSun" type="java.lang.Boolean" update="true" insert="true" access="property" column="RUNONSUN" />
+
+		<!-- <set name="reports" table="REPORT_SCHEDULES">
+			<key column="SCHEDULEID" />
+			<many-to-many column="REPORTID" class="ct.common.hibernate.example2.Report" />
+		</set> -->
+	</class>
+</hibernate-mapping>         
